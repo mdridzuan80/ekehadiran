@@ -242,6 +242,60 @@
             $('#modal-edit-minit-curai').modal('show');
         });
 
+        $('#dg-minit').on('click', ".btn-hapus", function(e) {
+            e.preventDefault();
+            minit_id = $(this).data('id');
+
+            swal({
+                title: 'Amaran!',
+                text: 'Anda pasti untuk menghapuskan maklumat ini?',
+                type: 'warning',
+                cancelButtonText: 'Tidak',
+                showCancelButton: true,
+                confirmButtonText: 'Ya!',
+                showLoaderOnConfirm: true,
+                allowOutsideClick: false,
+                allowOutsideClick: () => !swal.isLoading(),
+                preConfirm: () => {
+                    return new Promise((resolve, reject) => {
+
+                        $.ajax({
+                            type: 'delete',
+                            url: base_url + 'rpc/minitcurai/' + minit_id + '/destroy',
+                            success: function() {
+                                resolve();
+                            },
+                            error: function(err) {
+                                reject(err);
+                            },
+                            statusCode: login()
+                        });
+                    })
+                }
+            }).then((result) => {
+                if (result.value) {
+                    swal({
+                        title: 'Berjaya!',
+                        text: 'Maklumat telah dihapuskan',
+                        type: 'success'
+                    }).then(() => {
+                        populateDg(url, '#dg-minit');
+                    });
+                }
+            }).catch(function(error) {
+                var errorMsg = error.statusText;
+
+                if (error.status == 409) {
+                    errorMsg = 'Rekod telah wujud!';
+                }
+
+                swal({
+                    title: 'Ralat!',
+                    text: errorMsg,
+                    type: 'error'
+                });
+            });
+        });
 
         $('#dg-minit').on('click', ".btn-informasi", function(e) {
             e.preventDefault();
@@ -264,7 +318,7 @@
 
         $('#modal-edit-minit-curai').on('shown.bs.modal', function(e) {
             var modal = this;
-            $(this).find('.btn-majukan').on('click', function(e){
+            $(this).find('.btn-majukan').on('click', function(e) {
                 //console.log($(modal).find('.comPegawai').val());
                 $.ajax({
                     method: 'POST',
@@ -406,35 +460,35 @@
                 });
             });
         });
-        
+
         $('#modal-edit-minit-curai').on('hidden.bs.modal', function(e) {
             e.preventDefault();
             $(this).find('.modal-body').html('<h4><i class="fa fa-refresh fa-spin"></i> Loading...</h4>');
         })
 
-        $('#modal-edit-minit-curai').on('click', "#frm-cetak-minit-curai", function (e) {
+        $('#modal-edit-minit-curai').on('click', "#frm-cetak-minit-curai", function(e) {
             e.preventDefault();
-			var formData = new FormData(this);
+            var formData = new FormData(this);
 
 
-		$.ajaxSetup({
-			url: base_url+'rpc/minitcurai/'+minit_id+'/cetak',
-			type: 'POST',
-			data: formData,
-			beforeSend: function() {
-			  console.log('printing ...');
-			},
-			complete: function() {
-			  console.log('printed!');
-			}
-		  });
+            $.ajaxSetup({
+                url: base_url + 'rpc/minitcurai/' + minit_id + '/cetak',
+                type: 'POST',
+                data: formData,
+                beforeSend: function() {
+                    console.log('printing ...');
+                },
+                complete: function() {
+                    console.log('printed!');
+                }
+            });
 
-		  $.ajax({
-			success: function(viewContent) {
-			  $.print(viewContent); // This is where the script calls the printer to print the viwe's content.
-			}
-		  });
-		});
+            $.ajax({
+                success: function(viewContent) {
+                    $.print(viewContent); // This is where the script calls the printer to print the viwe's content.
+                }
+            });
+        });
 
         $('#modal-edit-minit-curai').on('click', "#btn-minit-sah", function(e) {
             e.preventDefault();
@@ -493,6 +547,7 @@
                 });
             });
         });
+
         $('#dg-minit').on('click', '.btn-page', function(e) {
             e.preventDefault();
             url = $(this).attr('href');

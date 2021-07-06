@@ -11,33 +11,34 @@
     </thead>
     <tbody>
         @forelse ($union as $minit)
-            <tr class="row-user">
-                <td>{{ ($union->currentpage()-1) * $union->perpage() + $loop->index + 1 }}</td>
-                <td>{{ $minit->tajuk }}</td>
-                <td>{{ $minit->anjuran }}</td>
-                <td>{{ ($minit->isOwner(Auth::user())) ? "--" : $minit->sender()->nama }}</td>
-                <td>{{ $minit->flag }}</td>
-                <td>
-                    @if($minit->flag != "DISAHKAN")
-                    <button class="btn btn-default btn-flat btn-sm btn-kemaskini" data-id="{{ $minit->id }}"><i class="fa fa-edit"></i> Kemaskini</button>
-                    @else
-                    <button class="btn btn-success btn-flat btn-sm btn-block btn-informasi" data-id="{{ $minit->id }}"><i class="fa fa-info"></i> Info</button>
-                    
-                </td>
+        <tr class="row-user">
+            <td>{{ ($union->currentpage()-1) * $union->perpage() + $loop->index + 1 }}</td>
+            <td>{{ $minit->tajuk }}</td>
+            <td>{{ $minit->anjuran }}</td>
+            <td>{{ ($minit->isOwner(Auth::user())) ? "--" : $minit->sender()->nama }}</td>
+            <td>{{ $minit->flag }}</td>
+            <td>
+                @if($minit->flag != "DISAHKAN")
+                <button class="btn btn-default btn-flat btn-sm btn-kemaskini" data-id="{{ $minit->id }}"><i class="fa fa-edit"></i> Kemaskini</button>
+                <button class="btn btn-default btn-flat btn-sm btn-hapus" data-id="{{ $minit->id }}"><i class="fa fa-trash-o"></i> Hapus</button>
+                @else
+                <button class="btn btn-success btn-flat btn-sm btn-block btn-informasi" data-id="{{ $minit->id }}"><i class="fa fa-info"></i> Info</button>
 
-                    @endif 
-            </tr>
+            </td>
+
+            @endif
+        </tr>
         @empty
-            <tr>
-                <td colspan="6">Rekod tidak wujud!</td>
-            </tr>
+        <tr>
+            <td colspan="6">Rekod tidak wujud!</td>
+        </tr>
         @endforelse
     </tbody>
 </table>
 
 @if ($union->total())
-    <div class="clearfix">
-        <span style="display: inline-block; vertical-align: middle; line-height: normal;">Papar {{ ($union->currentPage() * $union->perpage()) - ($union->perpage() - 1) }}  hingga {{ ($union->hasMorePages()) ? ($union->currentPage() * $union->perpage()) : $union->total() }}  daripada {{ $union->total() }} rekod</span>
-        {{ $union->links() }}
-    </div>
+<div class="clearfix">
+    <span style="display: inline-block; vertical-align: middle; line-height: normal;">Papar {{ ($union->currentPage() * $union->perpage()) - ($union->perpage() - 1) }} hingga {{ ($union->hasMorePages()) ? ($union->currentPage() * $union->perpage()) : $union->total() }} daripada {{ $union->total() }} rekod</span>
+    {{ $union->links() }}
+</div>
 @endif

@@ -146,6 +146,7 @@ Route::middleware('auth')->group(function () {
         Route::post('/minitcurai/grid', 'MinitCuraiController@grid');
         Route::get('/minitcurai/create', 'MinitCuraiController@create');
         Route::post('/minitcurai/store', 'MinitCuraiController@store');
+        Route::delete('/minitcurai/{minitCurai}/destroy', 'MinitCuraiController@destroy');
         Route::get('/minitcurai/{minitCurai}/edit', 'MinitCuraiController@edit');
         Route::patch('/minitcurai/{minitCurai}/edit', 'MinitCuraiController@update');
         Route::post('/minitcurai/{minitCurai}/send', 'MinitCuraiController@send');
@@ -153,11 +154,10 @@ Route::middleware('auth')->group(function () {
         Route::post('/minitcurai/{minitCurai}/forward', 'MinitCuraiController@forward');
         //Route::get("/pdf_cetak_inbox/{id}", "App\Http\Controllers\MinitCuraiController@pdf_cetak_inbox");
         Route::get('/minitcurai/{minitCurai}/cetak', 'MinitCuraiController@cetak');
-        Route::get('pdf_cetak_inbox', function()
-        {
+        Route::get('pdf_cetak_inbox', function () {
             return view('pdf_cetak_inbox');
         });
-        
+
         // bahagian
         Route::get('/bahagian/create', 'BahagianController@create');
         Route::post('/bahagian/store', 'BahagianController@store');
@@ -165,13 +165,11 @@ Route::middleware('auth')->group(function () {
         Route::match(['put', 'patch'], '/bahagian/{dept}/store', 'BahagianController@update');
         Route::delete('/bahagian/{dept}', 'BahagianController@destroy');
 
-         // Acara
+        // Acara
         Route::get('/acara', 'AcaraController@index');
     });
     Route::get('/minitcurai/{minitCurai}/cetak', 'MinitCuraiController@cetak');
-
 });
 
-    // Acara
-    Route::get('/acara', 'AcaraController@index');
-
+// Acara
+Route::get('/acara', 'AcaraController@index');
