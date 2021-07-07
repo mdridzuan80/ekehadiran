@@ -4,27 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>MINIT CURAI</title>
-    <style type="text/css>
-	.footer {
-	  position: fixed;
-	  left: 0;
-	  bottom: 0;
-	  width: 100%;
-	  background-color: black;
-	  color: white;
-	  text-align: center;
-	}
-	table {
-        border-collapse: separate;
-        border-spacing: 0 15px;
-      }
-      	th,
-      	td {
-		
-		text-align: left;
-		
-	}
-     </style>
+    <style type="text/css></style>
 </head>
 
 <body>
@@ -132,8 +112,6 @@
         </tr>
     </table>
 </body>
-<div class="footer">
-  <p>Hak Milik Jabatan Pendidikan Negeri Melaka</p>
-</div>
+
 
 </html>
