@@ -16,62 +16,51 @@
 	
     <table width="100%" border="" align="center">
         <tr>
-            <td>1. &nbsp;&nbsp;&nbsp;
-                Mesyuarat luar / Bengkel / Kursus / Program:</td>
+            <th>1. &nbsp;&nbsp;&nbsp;
+                Mesyuarat luar / Bengkel / Kursus / Program:</th>
         </tr>
         <tr>
             <td>{{ $minitCurai->tajuk }}</td>
         </tr>
-	<tr style="border-bottom:1px solid black">
-		<td colspan="100%"></td>
-	</tr>
-        <tr>
-            <td>2. &nbsp;&nbsp;&nbsp;
+	<tr>
+            <th>2. &nbsp;&nbsp;&nbsp;
                 Anjuran:</td>
         </tr>
 	<tr>
             <td>{{ $minitCurai->anjuran }}</td>
         </tr>
-	<tr style="border-bottom:1px solid black">
-		<td colspan="100%"></td>
-	</tr>
+	
         <tr>
-            <td>3. &nbsp;&nbsp;&nbsp;
-                Tarikh / Masa / Tempat:</td>
+            <th>3. &nbsp;&nbsp;&nbsp;
+                Tarikh / Masa / Tempat:</th>
         </tr>
         <tr>
             <td>{{ $minitCurai->tarikh }}, {{ $minitCurai->lokasi }}</td>
         </tr>
-        <tr style="border-bottom:1px solid black">
-		<td colspan="100%"></td>
-	</tr>
+        
 	<tr>
-            <td>4. &nbsp;&nbsp;&nbsp;
-                Pegawai Yang Terlibat:</td>
+            <th>4. &nbsp;&nbsp;&nbsp;
+                Pegawai Yang Terlibat:</th>
         </tr>
         <tr>
             <td>{{ $minitCurai->pegawai_terlibat }}</td>
         </tr>
        	<tr>
-            <td>5. &nbsp;&nbsp;&nbsp;
-                Isu / Isu Penting Mesyuarat luar / Bengkel / Kursus / Program:</td>
+            <th>5. &nbsp;&nbsp;&nbsp;
+                Isu / Isu Penting Mesyuarat luar / Bengkel / Kursus / Program:</th>
         </tr>
         <tr>
             <td>{{ $minitCurai->isu }}</td>
         </tr>
-        <tr style="border-bottom:1px solid black">
-			<td colspan="100%"></td>
-	</tr>
+        
 	<tr>
-            <td>6. &nbsp;&nbsp;&nbsp;
-                Nyatakan Tindakan Yang Mesti / Perlu Diambil:</td>
+            <th>6. &nbsp;&nbsp;&nbsp;
+                Nyatakan Tindakan Yang Mesti / Perlu Diambil:</th>
         </tr>
         <tr>
             <td>{{ $minitCurai->tindakan }}</td>
         </tr>
-	<tr style="border-bottom:1px solid black">
-		<td colspan="100%"></td>
-	</tr>
+	
     </table>
     <br>
     <br>
