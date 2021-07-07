@@ -42,7 +42,9 @@
         <tr>
             <td>{{ $minitCurai->tarikh }}, {{ $minitCurai->lokasi }}</td>
         </tr>
-        
+        <tr>
+            <td><hr style="width:100%;text-align:left;margin-left:0"></td>
+        </tr>
 	<tr>
             <td><b>4. &nbsp;&nbsp;&nbsp;
                 Pegawai Yang Terlibat:</b></td>
@@ -123,9 +125,9 @@
             </td>
         </tr>
     </table>
-    <footer>  
-		<p align="center">Hak Milik Terpelihara || Sektor Pengurusan Maklumat || Jabatan Pendidikan Negeri Melaka</p>  
-    </footer> 
+    
+	<p align="center">Hak Milik Terpelihara || Sektor Pengurusan Maklumat || Jabatan Pendidikan Negeri Melaka</p>  
+  
 </body>
 
 
