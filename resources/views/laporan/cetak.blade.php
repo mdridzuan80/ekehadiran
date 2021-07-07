@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>MINIT CURAI</title>
-    <style type="text/css></style>
+    <style type="text/css"></style>
 </head>
 
 <body>
