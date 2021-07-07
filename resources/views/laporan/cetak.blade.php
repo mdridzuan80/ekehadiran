@@ -128,7 +128,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: grey;
+  background-color: black;
   color: white;
   text-align: center;
 }
