@@ -4,14 +4,34 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>MINIT CURAI</title>
-    <style type="text/css"></style>
+    <style type="text/css>
+	.footer {
+	  position: fixed;
+	  left: 0;
+	  bottom: 0;
+	  width: 100%;
+	  background-color: black;
+	  color: white;
+	  text-align: center;
+	}
+	table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+      }
+      	th,
+      	td {
+		
+		text-align: left;
+		
+	}
+     </style>
 </head>
 
 <body>
     <h5 align=center>MINIT CURAI</h5>
     <h5 align=center>MESYUARAT LUAR / BENGKEL / KURSUS / PROGRAM</h5>
     <h5 align=center>JABATAN PENDIDIKAN NEGERI MELAKA</h5>
-    <hr style="width:100%;text-align:center;margin-left:0">
+    <hr style="width:100%;text-align:left;margin-left:0">
     <br>
 	
     <table width="100%" border="" align="center">
@@ -111,21 +131,9 @@
             </td>
         </tr>
     </table>
-<style>
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-</style>
+</body>
 <div class="footer">
   <p>Hak Milik Jabatan Pendidikan Negeri Melaka</p>
 </div>
-
-</body>
 
 </html>
