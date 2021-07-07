@@ -126,8 +126,6 @@
         </tr>
     </table>
     
-	<p align="center">Hak Milik Terpelihara || Sektor Pengurusan Maklumat || Jabatan Pendidikan Negeri Melaka</p>  
-  
 </body>
 
 
