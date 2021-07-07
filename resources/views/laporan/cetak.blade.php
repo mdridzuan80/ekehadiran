@@ -73,9 +73,12 @@
             <td>{{ $minitCurai->tindakan }}</td>
         </tr>
 	<tr>
-            <td><hr style="width:100%;text-align:left;margin-left:0"></td>
+            <td></td>
         </tr>
-    </table>
+	<tr>
+            <td></td>
+        </tr>
+	</table>
     <br>
     <br>
     <br>
@@ -100,11 +103,18 @@
     <br>
     <table width="100%" border="" align="center">
         <tr>
+            <td><hr style="width:100%;text-align:left;margin-left:0"></td>
+        </tr>
+	<tr>
             <td>Arahan / Cadangan bagi Tindakan / Keputusan oleh Pengarah / Timbalan Pengarah :</td>
         </tr>
         <tr>
             <td></td>
         </tr>
+	<tr>
+            <td></td>
+        </tr>
+	
     </table>
     <br>
     <br>
