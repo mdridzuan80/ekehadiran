@@ -60,12 +60,20 @@
                     <td><button class="btn btn-default btn-majukan" type="button">MAJUKAN KEPADA >></button></td>
                     <td>
                         <div class="col-12">
-                            <select class="form-control comPegawai" name="states[]" >
+                            <select class="form-control comPegawai selectpicker" name="states[]" data-live-search="true" >
+                                <option selected>Carian</option>
                                 @foreach($anggota as $ag)
                                 <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
                                 @endforeach
                             </select>
                         </div>
+                       <!-- <div class="col-12">
+                            <select class="form-control comPegawai" name="states[]" >
+                                @foreach($anggota as $ag)
+                                <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
+                                @endforeach
+                            </select>
+                        </div> -->
                     </td>
                 </tr>
                 </body>
