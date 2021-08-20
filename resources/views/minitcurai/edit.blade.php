@@ -60,7 +60,7 @@
                     <td><button class="btn btn-default btn-majukan" type="button">MAJUKAN KEPADA >></button></td>
                     <td>
                         <div class="col-12">
-                            <select class="form-control comPegawai" name="states[]" multiple="multiple">
+                            <select class="form-control comPegawai" name="states[]" >
                                 @foreach($anggota as $ag)
                                 <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
                                 @endforeach
