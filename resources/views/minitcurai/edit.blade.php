@@ -74,8 +74,11 @@
         <!-- <button class="btn btn-success btn-cetak" type="">CETAK</button> -->
         <!-- <button id="btn-minit-cetak" class="btn btn-success" data-status="CETAK">CETAK</button> -->
 
-       <button><a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">Cetak</a></button> 
-        <!-- <a href="{{ url('/minitcurai/{minitCurai}/cetak') }}">Cetak</a> -->
+        <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a>
+        <!-- <a href="{{ url('/minitcurai/{minitCurai}/cetak') }}">Cetak</a> 
+        <button><a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">Cetak</a></button>
+        <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a>
+        -->
 
         @if($minitCurai->flag == $MinitCurai::DERAF || $minitCurai->flag == $MinitCurai::PULANG)
         <button id="btn-minit-hantar" class="btn btn-success">HANTAR</button>
