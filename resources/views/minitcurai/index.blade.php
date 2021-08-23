@@ -335,7 +335,7 @@
                     }
                 });
             });
-               $(".comPegawai").comPegawai();     
+               
         });
 
         $('#modal-edit-minit-curai').on('submit', "#frm-edit-minit-curai", function(e) {
@@ -555,9 +555,7 @@
         });
     });
 </script>
-<script type="text/javascript">
-$(".comPegawai").comPegawai();
-</script>
+
 
 
 
