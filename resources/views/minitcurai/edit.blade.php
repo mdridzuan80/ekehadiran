@@ -61,14 +61,21 @@
                     <td>
                                                  
                         <div class="col-12">
-                            <select class="form-control comPegawai " name="states[]" placeholder="Carian ..">
+                            <input list="form-control comPegawai" name="states[]" >
+                                <datalist id="form-control comPegawai">
                                 @foreach($anggota as $ag)
                                 <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
                                 @endforeach
-                            </select>
+                                </datalist> 
                         </div>
                        <!-- <div class="col-12">
-                            <select class="form-control comPegawai" name="states[]" >
+                            <input list="form-control comPegawai" name="states[]" >
+                                <datalist id="form-control comPegawai">
+                                @foreach($anggota as $ag)
+                                <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
+                                @endforeach
+                                </datalist> 
+                            <select class="form-control comPegawai " name="states[]" placeholder="Carian ..">
                                 @foreach($anggota as $ag)
                                 <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
                                 @endforeach
