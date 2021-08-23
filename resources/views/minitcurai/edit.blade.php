@@ -60,13 +60,39 @@
                     <td><button class="btn btn-default btn-majukan" type="button">MAJUKAN KEPADA >></button></td>
                     <td>
                         <div class="col-12">
+                              <div class="group">
+                                <input id="cb1-input"
+                                       class="form-control comPegawai"
+                                       type="text"
+                                       role="combobox"
+                                       aria-autocomplete="list"
+                                       aria-expanded="false"
+                                       aria-controls="cb1-listbox">
+                                   name="states[]"
+                                <button id="cb1-button"
+                                        tabindex="-1"
+                                        aria-label="Open">
+                                  ▼
+                                </button>
+                              </div>
+
+                                <ul id="cb1-listbox"
+                                  role="listbox"
+                                  aria-label="Carian">
+                                @foreach($anggota as $ag)
+                                <li value={{ $ag->anggota_id }}>{{ $ag->nama }}></li>
+                                @endforeach
+                              </ul>
+                            </div>
+                        
+                        <!-- <div class="col-12">
                             <select class="form-control comPegawai selectpicker" name="states[]" data-live-search="true" >
                                 <option selected>Carian</option>
                                 @foreach($anggota as $ag)
                                 <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
                                 @endforeach
                             </select>
-                        </div>
+                        </div> -->
                        <!-- <div class="col-12">
                             <select class="form-control comPegawai" name="states[]" >
                                 @foreach($anggota as $ag)
