@@ -61,7 +61,7 @@
                     <td>
                                                  
                         <div class="col-12">
-                            <select class="form-control comPegawai " name="states[]" >
+                            <select class="form-control comPegawai " name="states[]" placeholder="Carian ..">
                                 @foreach($anggota as $ag)
                                 <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
                                 @endforeach
