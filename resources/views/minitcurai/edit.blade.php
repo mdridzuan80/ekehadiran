@@ -61,8 +61,7 @@
                     <td>
                                                  
                         <div class="col-12">
-                            <select class="form-control comPegawai " name="states[]" autocomplete="on" >
-                                <option selected>Carian</option>
+                            <select class="form-control comPegawai " name="states[]" >
                                 @foreach($anggota as $ag)
                                 <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
                                 @endforeach
@@ -83,7 +82,8 @@
         <!-- <button class="btn btn-success btn-cetak" type="">CETAK</button> -->
         <!-- <button id="btn-minit-cetak" class="btn btn-success" data-status="CETAK">CETAK</button> -->
 
-        <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a>
+        <!-- <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a> -->
+        <button class="btn btn-success btn-cetak" type="submit" onclick="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">Cetak</button>
         <!-- <a href="{{ url('/minitcurai/{minitCurai}/cetak') }}">Cetak</a> 
         <button><a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">Cetak</a></button>
         <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a>
