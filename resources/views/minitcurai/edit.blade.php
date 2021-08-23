@@ -62,13 +62,13 @@
                         <div class="col-12">
                               <div class="group">
                                 <input id="cb1-input"
-                                       class="form-control comPegawai"
+                                       class="form-control"
                                        type="text"
                                        role="combobox"
-                                       aria-autocomplete="list"
+                                       aria-autocomplete=" comPegawai"
                                        aria-expanded="false"
                                        aria-controls="cb1-listbox">
-                                   name="states[]"
+                                        name="states[]"
                                 <button id="cb1-button"
                                         tabindex="-1"
                                         aria-label="Open">
