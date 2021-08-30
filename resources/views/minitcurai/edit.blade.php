@@ -90,7 +90,7 @@
         <!-- <button id="btn-minit-cetak" class="btn btn-success" data-status="CETAK">CETAK</button> -->
 
         <!-- <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a> -->
-        <button class="btn btn-success btn-cetak" type="submit" onclick="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">Cetak</button>
+        <button class="btn btn-default btn-sm" role="button" aria-pressed="true" onclick="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">Cetak</button>
         <!-- <a href="{{ url('/minitcurai/{minitCurai}/cetak') }}">Cetak</a> 
         <button><a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">Cetak</a></button>
         <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a>
