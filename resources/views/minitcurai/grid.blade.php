@@ -19,7 +19,7 @@
             <td>{{ $minit->flag }}</td>
             <td>
                 @if($minit->flag != "DISAHKAN")
-                <button class="btn btn-default btn-flat btn-sm btn-block btn-kemaskini" data-id="{{ $minit->id }}"><i class="fa fa-edit"></i> Kemaskini</button>
+                <button class="btn btn-warning btn-flat btn-sm btn-block btn-kemaskini" data-id="{{ $minit->id }}"><i class="fa fa-edit"></i> Kemaskini</button>
                 <button class="btn btn-default btn-flat btn-sm btn-block btn-hapus" data-id="{{ $minit->id }}"><i class="fa fa-trash-o"></i> Hapus</button>
                 @else
                 <button class="btn btn-success btn-flat btn-sm btn-block btn-informasi" data-id="{{ $minit->id }}"><i class="fa fa-info"></i> Info</button>
