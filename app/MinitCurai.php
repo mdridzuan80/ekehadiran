@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class MinitCurai extends Model
 {
     const DERAF = 'DERAF';
-    const HANTAR = 'BELUM DISAHKAN';
+    const HANTAR = 'HANTAR';
     const PULANG = 'PULANG';
     const SAH = 'DISAHKAN';
     const CETAK = 'CETAK';
