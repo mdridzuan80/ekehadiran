@@ -66,6 +66,12 @@
                                 @foreach($anggota as $ag)
                                 <option value="{{ $ag->nama }}">{{ $ag->anggota_id }}</option>
                                 @endforeach
+                                @foreach($anggota as $ag)
+                                <option value="{{ $ag->nama }}">{{ $ag->anggota_id }}</option>
+                                @endforeach
+                                @foreach($anggota as $ag)
+                                <option value="{{ $ag->nama }}">{{ $ag->anggota_id }}</option>
+                                @endforeach
                                 </datalist> 
                         </div>
                        <!-- <div class="col-12">
@@ -89,10 +95,10 @@
         <!-- <button class="btn btn-success btn-cetak" type="">CETAK</button> -->
         <!-- <button id="btn-minit-cetak" class="btn btn-success" data-status="CETAK">CETAK</button> -->
 
-        <!-- <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a> -->
-        <button class="btn btn-default btn-sm" role="button" aria-pressed="true" onclick="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">Cetak</button>
+        
+        <button class="btn btn-default btn-sm" role="button" aria-pressed="true" onclick="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">Cetak</button> 
         <!-- <a href="{{ url('/minitcurai/{minitCurai}/cetak') }}">Cetak</a> 
-        <button><a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">Cetak</a></button>
+        <!-- <button><a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">Cetak</a></button> -->
         <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a>
         -->
 
@@ -103,6 +109,6 @@
         <button id="btn-minit-pulang" class="btn btn-success" data-status="PULANG">PULANG</button>
         <button id="btn-minit-sah" class="btn btn-success" data-status="SAH">SAH</button>
         @endif
-
+        <!-- <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a> -->
     </form>
 </div>
