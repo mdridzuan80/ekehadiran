@@ -33,7 +33,7 @@
     </style>
 </head>
 <body class="hold-transition login-page">
-<img src="{{asset('images/banner.jpg')}}" alt="" width="">
+<img src="{{asset('images/banner.jpg')}}" alt height="" width="100%">
 <div class="login-box">
   <div class="login-logo">
     <!-- <img src="{{ asset('dist/img/logo_dalam.png') }}" alt="Logo Rasmi eMasa"> -->
