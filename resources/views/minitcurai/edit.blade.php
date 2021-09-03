@@ -64,7 +64,7 @@
                             <input list="form-control comPegawai" name="states[]" >
                                 <datalist id="form-control comPegawai">
                                 @foreach($anggota as $ag)
-                                <option value="{{ $ag->nama }}">{{ $ag->anggota_id }}</option>
+                                <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
                                 @endforeach
                                 </datalist> 
                         </div>
