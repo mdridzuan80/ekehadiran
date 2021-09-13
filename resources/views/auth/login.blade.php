@@ -33,7 +33,7 @@
     </style>
    <style type="text/css">
         .bgimg {
-            background-image: url('images/bg1.jpg');
+            background-image: url('images/bg2.jpg');
             background-repeat: repeat-y;
         }
    </style>
