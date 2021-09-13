@@ -31,9 +31,15 @@
     <style>
       .capslockMessage { color: red; }
     </style>
+    <style>
+        body  {
+          background-image: url("images/bg1.jpg");
+          background-color: #cccccc;
+        }
+    </style>
 </head>
 <body class="hold-transition login-page">
-<div class="banner"><img src="{{asset('images/banner3.jpg')}}" alt height="" width="100%"></div>
+  <!-- <div class="banner"><img src="{{asset('images/banner3.jpg')}}" alt height="" width="100%"></div> -->
 <div class="login-box">
   <div class="login-logo">
     <!-- <img src="{{ asset('dist/img/logo_dalam.png') }}" alt="Logo Rasmi eMasa"> -->
