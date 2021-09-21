@@ -36,7 +36,7 @@
   <!-- <div class="banner"><img src="{{asset('images/banner3.jpg')}}" alt height="" width="100%"></div> -->
 <div class="login-box">
   <div class="login-logo">
-    <!-- <div><p style="text-align: center"><img src="{{asset('images/logo1.png')}}" alt height="85px" width="100px"></p></div> -->
+    <div><p style="text-align: center"><img src="{{asset('images/logo1.png')}}" alt height="85px" width="100px"></p></div>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
