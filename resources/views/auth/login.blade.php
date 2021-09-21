@@ -29,17 +29,18 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
     
-   <div><img src="{{asset('images/bg1.jpg')}}" alt height="40%" width="100%"></div>
+   <img src="{{asset('images/bg1.jpg')}}" alt height="40%" width="100%"></div>
 </head>
 <body class="hold-transition login-page">
   <div class="bgimg"></div>
   <!-- <div class="banner"><img src="{{asset('images/banner3.jpg')}}" alt height="" width="100%"></div> -->
 <div class="login-box">
   <div class="login-logo">
-    <div><p style="text-align: center"><img src="{{asset('images/logo1.png')}}" alt height="85px" width="100px"></p></div>
+    
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
+    <p style="text-align: center"><img src="{{asset('images/Logo1.png')}}" alt height="85px" width="100px"></p>
     @if (session('error'))
     <div class="alert alert-danger alert-dismissible">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
