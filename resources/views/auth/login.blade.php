@@ -78,7 +78,7 @@
     </form>
   </div>
   <!-- /.login-box-body -->
-  <br><p style="text-align: center">Sila muatturun manual eJPNM <a href="{{ URL::to('images/Manual.pdf') }}">disini</a></p>
+  <br><p style="text-align: center">Sila muatturun manual eJPNM <a href="{{ asset('images/MANUAL.pdf') }}">disini</a></p>
 </div>
 <!-- /.login-box -->
 
