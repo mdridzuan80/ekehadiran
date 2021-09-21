@@ -78,7 +78,7 @@
     </form>
   </div>
   <!-- /.login-box-body -->
-  
+  <p style="text-align: center">Sila muatturun manual eJPNM<a href="images/Manual.pdf" download="MANUAL">disini</a></p>
 </div>
 <!-- /.login-box -->
 
