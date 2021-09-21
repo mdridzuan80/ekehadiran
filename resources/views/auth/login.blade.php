@@ -28,15 +28,8 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-    <style>
-      .capslockMessage { color: red; }
-    </style>
-   <style type="text/css">
-        .bgimg {
-            background-image: url('images/bg2.jpg');
-            background-repeat: repeat-y;
-        }
-   </style>
+    
+   <img src="{{asset('images/bg1.jpg')}}" alt height="30%" width="100%"></div>
 </head>
 <body class="hold-transition login-page">
   <div class="bgimg"></div>
@@ -85,6 +78,7 @@
     </form>
   </div>
   <!-- /.login-box-body -->
+  
 </div>
 <!-- /.login-box -->
 
