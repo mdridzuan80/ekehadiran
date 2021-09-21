@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
     
-   <img src="{{asset('images/bg1.jpg')}}" alt height="30%" width="100%"></div>
+   <img src="{{asset('images/bg1.jpg')}}" alt height="40%" width="100%"></div>
 </head>
 <body class="hold-transition login-page">
   <div class="bgimg"></div>
