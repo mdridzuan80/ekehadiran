@@ -20,7 +20,7 @@
                 Mesyuarat luar / Bengkel / Kursus / Program:</b></td>
         </tr>
         <tr>
-            <td>{{ $minitCurai->tajuk }}</td>
+            <td><input type="text" name="txtAktiviti" value="{{ $minitCurai->tajuk }}" style="width:100%" readonly></td>
         </tr>
 	<tr>
             <td><hr style="width:100%;text-align:left;margin-left:0"></td>
@@ -30,7 +30,7 @@
                 Anjuran:</b></td>
         </tr>
 	<tr>
-            <td>{{ $minitCurai->anjuran }}</td>
+            <td><input type="text" name="txtAnjuran" value="{{ $minitCurai->anjuran }}" style="width:100%" readonly></td>
         </tr>
 	<tr>
             <td><hr style="width:100%;text-align:left;margin-left:0"></td>
@@ -50,7 +50,7 @@
                 Pegawai Yang Terlibat:</b></td>
         </tr>
         <tr>
-            <td>{{ $minitCurai->pegawai_terlibat }}</td>
+            <td><textarea name="txtPegawai" rows="4" style="width:100%" readonly>{{ $minitCurai->pegawai_terlibat }}</textarea></td>
         </tr>
 	<tr>
             <td><hr style="width:100%;text-align:left;margin-left:0"></td>
@@ -60,7 +60,7 @@
                 Isu / Isu Penting Mesyuarat luar / Bengkel / Kursus / Program:</b></td>
         </tr>
         <tr>
-            <td>{{ $minitCurai->isu }}</td>
+            <td><textarea name="txtIsu" rows="6" style="width:100%" readonly>{{ $minitCurai->isu }}</textarea></td>
         </tr>
         <tr>
             <td><hr style="width:100%;text-align:left;margin-left:0"></td>
@@ -70,7 +70,7 @@
                 Nyatakan Tindakan Yang Mesti / Perlu Diambil:<b></td>
         </tr>
         <tr>
-            <td>{{ $minitCurai->tindakan }}</td>
+            <td><textarea name="txtTindakan" rows="6" style="width:100%" readonly>{{ $minitCurai->tindakan }}</textarea></td>
         </tr>
 	<tr>
             <td></td>
