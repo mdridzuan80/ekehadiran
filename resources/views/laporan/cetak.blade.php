@@ -50,7 +50,7 @@
                 Pegawai Yang Terlibat:</b></td>
         </tr>
         <tr>
-            <td><textarea name="txtPegawai" rows="4" style="width:100%" readonly>{{ $minitCurai->pegawai_terlibat }}</textarea></td>
+            <td><textarea name="txtPegawai" rows="10" style="width:100%" readonly>{{ $minitCurai->pegawai_terlibat }}</textarea></td>
         </tr>
 	<tr>
             <td><hr style="width:100%;text-align:left;margin-left:0"></td>
@@ -60,7 +60,7 @@
                 Isu / Isu Penting Mesyuarat luar / Bengkel / Kursus / Program:</b></td>
         </tr>
         <tr>
-            <td><textarea name="txtIsu" rows="6" style="width:100%" readonly>{{ $minitCurai->isu }}</textarea></td>
+            <td><textarea name="txtIsu" rows="25" style="width:100%" readonly>{{ $minitCurai->isu }}</textarea></td>
         </tr>
         <tr>
             <td><hr style="width:100%;text-align:left;margin-left:0"></td>
@@ -70,7 +70,7 @@
                 Nyatakan Tindakan Yang Mesti / Perlu Diambil:<b></td>
         </tr>
         <tr>
-            <td><textarea name="txtTindakan" rows="6" style="width:100%" readonly>{{ $minitCurai->tindakan }}</textarea></td>
+            <td><textarea name="txtTindakan" rows="30" style="width:100%" readonly>{{ $minitCurai->tindakan }}</textarea></td>
         </tr>
 	<tr>
             <td></td>
