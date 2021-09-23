@@ -9,6 +9,6 @@ class DashboardController extends BaseController
 {
     public function index()
     {
-        return $this->renderView('acara.index');
+        return $this->renderView('dashboard.pengguna.index');
     }
 }
