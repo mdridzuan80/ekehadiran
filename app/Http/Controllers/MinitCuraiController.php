@@ -63,7 +63,7 @@ class MinitCuraiController extends BaseController
 
     public function edit(MinitCurai $minitCurai)
     {
-        $anggota = XtraAnggota::get();
+        $anggota = XtraAnggota::where('dept_id', '<>', 44)->get();
         return view('minitcurai.edit', compact('minitCurai', 'anggota'));
     }
 
