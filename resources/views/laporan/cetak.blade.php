@@ -5,6 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>MINIT CURAI</title>
     <style type="text/css"></style>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
 </head>
 
 <body>
@@ -14,7 +17,8 @@
     <hr style="width:100%;text-align:left;margin-left:0">
     <br>
 	
-    <table width="100%" border="" align="center">
+  
+     <table  class="table table-borderless" width="100%" align="center">
         <tr>
             <td><b>1. &nbsp;&nbsp;&nbsp;
                 Mesyuarat luar / Bengkel / Kursus / Program:</b></td>
@@ -49,7 +53,7 @@
             <td><b>4. &nbsp;&nbsp;&nbsp;
                 Pegawai Yang Terlibat:</b></td>
         </tr>
-        <tr height="10%">
+        <tr height="30%">
             <td><textarea name="txtPegawai" rows="10" style="width:100%" readonly>{{ $minitCurai->pegawai_terlibat }}</textarea></td>
         </tr>
 	<tr>
@@ -59,7 +63,7 @@
             <td><b>5. &nbsp;&nbsp;&nbsp;
                 Isu / Isu Penting Mesyuarat luar / Bengkel / Kursus / Program:</b></td>
         </tr>
-        <tr height="20%">
+        <tr height="60%">
             <td><textarea name="txtIsu" rows="25" style="width:100%" readonly>{{ $minitCurai->isu }}</textarea></td>
         </tr>
         <tr>
@@ -69,7 +73,7 @@
             <td><b>6. &nbsp;&nbsp;&nbsp;
                 Nyatakan Tindakan Yang Mesti / Perlu Diambil:<b></td>
         </tr>
-        <tr height="20%">
+        <tr height="60%">
             <td><textarea name="txtTindakan" rows="30" style="width:100%" readonly>{{ $minitCurai->tindakan }}</textarea></td>
         </tr>
 	<tr>
