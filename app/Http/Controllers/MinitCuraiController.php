@@ -11,7 +11,7 @@ use App\MinitCuraiFlow;
 use Illuminate\Http\Request;
 use App\Base\BaseController;
 use App\XtraAnggota;
-use Illuminate\Support\Facades\DB;
+
 
 class MinitCuraiController extends BaseController
 {
@@ -63,7 +63,7 @@ class MinitCuraiController extends BaseController
 
     public function edit(MinitCurai $minitCurai)
     {
-        $anggota = XtraAnggota::where('dept_id', '<>', 44)->get();
+        $anggota = XtraAnggota::filterByLogin();
         return view('minitcurai.edit', compact('minitCurai', 'anggota'));
     }
 
