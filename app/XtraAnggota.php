@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Auth;
+
 
 class XtraAnggota extends Model
 {
@@ -97,11 +97,5 @@ class XtraAnggota extends Model
         );
     }
     
-    public static function filterByLogin() 
-    {
-        if (Auth::user()->perananSemasa()->key == Role::KETUA_JABATAN) {
-            return Self::select()->where('dept_id', '<>', 44)->get();
-        }
-        return Self::select()->where('dept_id', Auth::user()->xtraAnggota->dept_id)->get();
-    }
+    
 }
