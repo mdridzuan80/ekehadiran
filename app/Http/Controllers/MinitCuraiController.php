@@ -65,7 +65,14 @@ class MinitCuraiController extends BaseController
 
     public function edit(MinitCurai $minitCurai)
     {
-        $anggota = XtraAnggota::filterByLogin();
+        $anggota = XtraAnggota::select();
+        
+        if (Auth::user()->perananSemasa()->key == Role::KETUA_JABATAN) {
+           $anggota = XtraAnggota->where('dept_id', '<>', 44)->get();
+        }
+        else {
+            $anggota = XtraAnggota->where('dept_id', Auth::user()->XtraAnggota->dept_id)->get();
+        }    
         return view('minitcurai.edit', compact('minitCurai', 'anggota'));
     }
 
@@ -125,7 +132,7 @@ class MinitCuraiController extends BaseController
 
     public function cetak(MinitCurai $minitCurai)
     {
-        $pdf = PDF::loadView('minitcurai.cetak', compact('minitCurai'));
+        $pdf = PDF::loadView('laporan.cetak', compact('minitCurai'));
         return $pdf->download('MinitCuraiJPNMelaka.pdf');
     }
 
