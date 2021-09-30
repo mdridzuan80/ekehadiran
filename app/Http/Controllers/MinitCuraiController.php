@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Base\BaseController;
 use App\XtraAnggota;
 use Illuminate\Support\Facades\DB;
+use App\Role;
 
 
 
