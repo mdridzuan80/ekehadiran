@@ -94,7 +94,7 @@
       <button class="btn btn-default btn-sm" role="button" aria-pressed="true" onclick="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">3.Cetak</button> 
         <!-- <a href="{{ url('/minitcurai/{minitCurai}/cetak') }}">Cetak</a> --> 
          <!-- <button><a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}">4.Cetak</a></button> -->
-         <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">5.CETAK</a> -->
+         <!-- <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">5.CETAK</a> -->
         
 
         @if($minitCurai->flag == $MinitCurai::DERAF || $minitCurai->flag == $MinitCurai::PULANG)
@@ -104,6 +104,6 @@
         <button id="btn-minit-pulang" class="btn btn-success" data-status="PULANG">PULANG</button>
         <button id="btn-minit-sah" class="btn btn-success" data-status="SAH">SAH</button>
         @endif
-        
+        <a href="{{ url('/laporan/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a>
     </form>
 </div>
