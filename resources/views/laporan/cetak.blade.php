@@ -6,7 +6,6 @@
     <title>MINIT CURAI</title>
     <style type="text/css"></style>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
 </head>
 
@@ -18,7 +17,7 @@
     <br>
 	
   
-     <table  class="table table-borderless" width="100%" align="center">
+     <table cellspacing="0" cellpadding="0" width="100%" align="center">
         <tr>
             <td><b>1. &nbsp;&nbsp;&nbsp;
                 Mesyuarat luar / Bengkel / Kursus / Program:</b></td>
