@@ -136,7 +136,7 @@ class MinitCuraiController extends BaseController
         $pdf = PDF::loadView('laporan.cetak', compact('minitCurai'));
         return $pdf->download('MinitCuraiJPNMelaka.pdf');
     }
-
+    
     public function destroy(MinitCurai $minitCurai)
     {
         $deleted = $minitCurai->delete();
