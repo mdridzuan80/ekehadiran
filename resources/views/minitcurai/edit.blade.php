@@ -104,7 +104,8 @@
         <button id="btn-minit-pulang" class="btn btn-success" data-status="PULANG">PULANG</button>
         <button id="btn-minit-sah" class="btn btn-success" data-status="SAH">SAH</button>
         @endif
-        <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" download="pdf" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a>
+        
         
     </form>
+    <a href="{{ url('/minitcurai/'.$minitCurai->id.'/cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a>
 </div>
