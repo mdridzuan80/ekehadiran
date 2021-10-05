@@ -133,7 +133,7 @@ class MinitCuraiController extends BaseController
 
     public function cetak(MinitCurai $minitCurai)
     {
-        $pdf = PDF::loadView('laporan.cetak', compact('minitCurai'));
+        $pdf = PDF::loadView('laporan.cetak', compact('minitCurai', 'anggota'));
         return $pdf->download('MinitCuraiJPNMelaka.pdf');
     }
     
