@@ -131,17 +131,10 @@ class MinitCuraiController extends BaseController
         }
     }
 
-    public function cetak(Request $request)
+    public function cetak(MinitCurai $minitCurai)
     {
-        $minitCurai = MinitCurai::all();
-        view()->share('minitcurai',$minitCurai);
-        
-        if($request->has('download')){
-        $pdf = PDF::loadView('minitcurai.cetak', compact('minitCurai'));
+        $pdf = PDF::loadView('laporan.cetak', compact('minitCurai'));
         return $pdf->download('MinitCuraiJPNMelaka.pdf');
-        }
-        
-        return view('minitcurai.edit', compact('minitCurai', 'anggota'));
     }
     
     public function destroy(MinitCurai $minitCurai)
