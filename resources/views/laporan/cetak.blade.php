@@ -10,8 +10,14 @@
     <style>
 	textarea {
 	  width: 100%;
-	  height: 450px;
+	  height: 250px;
 	}
+	
+	#txtTindakan {
+			display: block;
+			overflow: hidden;
+			resize: none;
+		}
     </style>
     
 </head>
@@ -79,10 +85,11 @@
             <td><b>6. &nbsp;&nbsp;&nbsp;
                 Nyatakan Tindakan Yang Mesti / Perlu Diambil:<b></td>
         </tr>
-	</table>
-        
-            <textarea name="txtTindakan" readonly>{{ $minitCurai->tindakan }}</textarea></td>
-        
+	<tr>
+             <td>
+	     <textarea id="txtTindakan" readonly>{{ $minitCurai->tindakan }}</textarea></td>
+        </tr>    
+        </table>
     <br>
     <br>
     <br>
@@ -139,7 +146,15 @@
             </td>
         </tr>
     </table>
-    
+
+<script type="text/javascript">
+		$('#txtTindakan').on('input', function () {
+			this.style.height = 'auto';
+			
+			this.style.height =
+					(this.scrollHeight) + 'px';
+		});
+	</script>
 </body>
 
 
