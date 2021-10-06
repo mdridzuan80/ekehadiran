@@ -78,16 +78,10 @@
             <td><b>6. &nbsp;&nbsp;&nbsp;
                 Nyatakan Tindakan Yang Mesti / Perlu Diambil:<b></td>
         </tr>
-        <tr>
-            <td><textarea name="txtTindakan" rows="10" cols="100%" readonly>{{ $minitCurai->tindakan }}</textarea></td>
-        </tr>
-	<tr>
-            <td></td>
-        </tr>
-	<tr>
-            <td></td>
-        </tr>
 	</table>
+        
+            <textarea name="txtTindakan" rows="10" cols="100%" readonly>{{ $minitCurai->tindakan }}</textarea></td>
+        
     <br>
     <br>
     <br>
