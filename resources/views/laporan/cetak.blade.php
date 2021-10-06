@@ -7,6 +7,12 @@
     <style type="text/css"></style>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     
+    <style>
+	textarea {
+	  resize: none;
+	}
+    </style>
+    
 </head>
 
 <body>
@@ -73,7 +79,7 @@
                 Nyatakan Tindakan Yang Mesti / Perlu Diambil:<b></td>
         </tr>
         <tr>
-            <td><div height="870" style="border:solid 1px #ccc"><textarea name="txtTindakan" style="width:100%" rows="30"readonly>{{ $minitCurai->tindakan }}</textarea></div></td>
+            <td><textarea name="txtTindakan" rows="10" cols="100%" readonly>{{ $minitCurai->tindakan }}</textarea></td>
         </tr>
 	<tr>
             <td></td>
