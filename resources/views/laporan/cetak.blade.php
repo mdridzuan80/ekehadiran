@@ -147,6 +147,8 @@
         </tr>
     </table>
 
+
+</body>
 <script type="text/javascript">
 		$('#txtTindakan').on('input', function () {
 			this.style.height = 'auto';
@@ -155,7 +157,5 @@
 					(this.scrollHeight) + 'px';
 		});
 	</script>
-</body>
-
 
 </html>
