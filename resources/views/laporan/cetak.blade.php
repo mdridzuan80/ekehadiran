@@ -9,7 +9,8 @@
     
     <style>
 	textarea {
-	  resize: none;
+	  width: 100%;
+	  height: 450px;
 	}
     </style>
     
@@ -59,7 +60,7 @@
                 Pegawai Yang Terlibat:</b></td>
         </tr>
         <tr>
-            <td><textarea name="txtPegawai" style="width:100%" readonly>{{ $minitCurai->pegawai_terlibat }}</textarea></td>
+            <td><textarea name="txtPegawai" readonly>{{ $minitCurai->pegawai_terlibat }}</textarea></td>
         </tr>
 	<tr>
             <td><hr style="width:100%;text-align:left;margin-left:0"></td>
@@ -69,7 +70,7 @@
                 Isu / Isu Penting Mesyuarat luar / Bengkel / Kursus / Program:</b></td>
         </tr>
         <tr>
-            <td><textarea name="txtIsu" style="width:100%" readonly>{{ $minitCurai->isu }}</textarea></td>
+            <td><textarea name="txtIsu" readonly>{{ $minitCurai->isu }}</textarea></td>
         </tr>
         <tr>
             <td><hr style="width:100%;text-align:left;margin-left:0"></td>
@@ -80,7 +81,7 @@
         </tr>
 	</table>
         
-            <textarea name="txtTindakan" rows="10" cols="100%" readonly>{{ $minitCurai->tindakan }}</textarea></td>
+            <textarea name="txtTindakan" readonly>{{ $minitCurai->tindakan }}</textarea></td>
         
     <br>
     <br>
