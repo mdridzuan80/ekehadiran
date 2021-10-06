@@ -72,8 +72,8 @@
             <td><b>6. &nbsp;&nbsp;&nbsp;
                 Nyatakan Tindakan Yang Mesti / Perlu Diambil:<b></td>
         </tr>
-        <tr height="50%">
-            <td><textarea name="txtTindakan" style="width:100%" rows="30"readonly>{{ $minitCurai->tindakan }}</textarea></td>
+        <tr>
+            <td><div height="870" style="border:solid 1px #ccc"><textarea name="txtTindakan" style="width:100%" rows="30"readonly>{{ $minitCurai->tindakan }}</textarea></div></td>
         </tr>
 	<tr>
             <td></td>
