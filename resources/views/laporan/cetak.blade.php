@@ -13,11 +13,7 @@
 	  height: 250px;
 	}
 	
-	#txtTindakan {
-			display: block;
-			overflow: hidden;
-			resize: none;
-		}
+	
     </style>
     
 </head>
@@ -149,13 +145,6 @@
 
 
 </body>
-<script type="text/javascript">
-		$('#txtTindakan').on('input', function () {
-			this.style.height = 'auto';
-			
-			this.style.height =
-					(this.scrollHeight) + 'px';
-		});
-	</script>
+
 
 </html>
