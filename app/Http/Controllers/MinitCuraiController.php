@@ -125,7 +125,7 @@ class MinitCuraiController extends BaseController
             $fields = collect([
                 "from_anggota_id" => Auth::user()->anggota_id,
                 "to_anggota_id" => $pegawaiId,
-                "is_forward" => 2
+                "is_forward" => 1
             ]);
             MinitCurai::majukan($minitCurai, $fields);
         }
