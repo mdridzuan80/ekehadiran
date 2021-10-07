@@ -64,8 +64,6 @@
                            <select class="form-control comPegawai " name="states[]" multiple="multiple">
                                 @foreach($anggota as $ag)
                                 <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
-                                <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
-                                <option value={{ $ag->anggota_id }}>{{ $ag->nama }}</option>
                                 @endforeach
                             </select>
                            
