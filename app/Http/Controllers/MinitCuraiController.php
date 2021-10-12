@@ -69,10 +69,10 @@ class MinitCuraiController extends BaseController
         $xtraAnggota = XtraAnggota::select();
 
         if (Auth::user()->perananSemasa()->key == Role::KETUA_JABATAN) {
-           $anggota = $xtraAnggota->where('dept_id', '<>', 44)->get();
+           $anggota = $xtraAnggota->where('dept_id', '<>', 44)->orderBy('nama', 'desc');
         }
         else {
-            $anggota = $xtraAnggota->where('dept_id', Auth::user()->xtraAnggota->dept_id)->get();
+            $anggota = $xtraAnggota->where('dept_id', Auth::user()->xtraAnggota->dept_id)->orderBy('nama', 'desc');
         }    
         return view('minitcurai.edit', compact('minitCurai', 'anggota'));
     }
