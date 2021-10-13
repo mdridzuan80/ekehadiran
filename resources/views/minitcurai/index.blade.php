@@ -547,6 +547,59 @@
                 });
             });
         });
+        $('#modal-edit-minit-curai').on('click', "#btn-minit-pulang", function(e) {
+            e.preventDefault();
+            swal({
+                title: 'Amaran!',
+                text: 'Anda pasti untuk memulangkan maklumat ini?',
+                type: 'warning',
+                cancelButtonText: 'Tidak',
+                showCancelButton: true,
+                confirmButtonText: 'Ya!',
+                showLoaderOnConfirm: true,
+                allowOutsideClick: false,
+                allowOutsideClick: () => !swal.isLoading(),
+                preConfirm: () => {
+                    return new Promise((resolve, reject) => {
+                        $.ajax({
+                            method: 'post',
+                            cache: false,
+                            contentType: false,
+                            processData: false,
+                            url: base_url + 'rpc/minitcurai/' + minit_id + '/pulang',
+                            success: function() {
+                                resolve();
+                            },
+                            error: function(err) {
+                                reject(err);
+                            },
+                            statusCode: login()
+                        });
+                    })
+                }
+            }).then((result) => {
+                if (result.value) {
+                    swal({
+                        title: 'Berjaya!',
+                        text: 'Maklumat telah dihantar',
+                        type: 'success'
+                    }).then(() => {
+                        $('#modal-edit-minit-curai').modal('hide');
+                        populateDg(url, '#dg-minit');
+                    });
+                }
+            }).catch(function(error) {
+                var errorMsg = error.statusText;
+                if (error.status == 409) {
+                    errorMsg = 'Rekod telah wujud!';
+                }
+                swal({
+                    title: 'Ralat!',
+                    text: errorMsg,
+                    type: 'error'
+                });
+            });
+        });
 
         $('#dg-minit').on('click', '.btn-page', function(e) {
             e.preventDefault();
