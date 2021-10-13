@@ -107,6 +107,11 @@ class MinitCuraiController extends BaseController
     {
         $minitCurai->validating();
     }
+    
+    public function pulang(MinitCurai $minitCurai, Request $request)
+    {
+        $minitCurai->returning();
+    }
 
     public function send(MinitCurai $minitCurai)
     {
