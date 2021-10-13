@@ -57,6 +57,12 @@ class MinitCurai extends Model
         $this->flag = self::SAH;
         $this->save();
     }
+    
+    public function returning()
+    {
+        $this->flag = self::PULANG;
+        $this->save();
+    }
 
     public static function majukan($mc, $fields)
     {
