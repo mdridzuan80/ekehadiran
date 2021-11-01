@@ -48,10 +48,10 @@ class MinitCuraiController extends BaseController
 
     public function grid(Request $request)
     {
-        $search = collect([
+        /* $search = collect([
             'key' => $request->input('search-key'),
             'dept' => Utility::pcrsListerDepartment($request->input('subDept'), $request->input('searchDept')),
-        ]); 
+        ]); */ 
 	
         $perPage = 10;
 
@@ -63,7 +63,8 @@ class MinitCuraiController extends BaseController
             $created = MinitCurai::where("anggota_id", Auth::user()->anggota_id)->orderBy('created_at', 'desc');
 			
         }    
-        
+            $search = $request->input('search-key');
+	    $minitCurai = MinitCurai::query()->where('jenis', 'LIKE', "%{$search}%");
 
             $involve = MinitCurai::select("minitcurai.*")->join("minitcurai_flow", "minitcurai.id", "=",  "minitcurai_flow.minitcurai_id")
                 ->where("minitcurai_flow.to_anggota_id", Auth::user()->anggota_id);
