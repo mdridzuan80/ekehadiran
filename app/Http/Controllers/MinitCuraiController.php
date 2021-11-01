@@ -157,6 +157,19 @@ class MinitCuraiController extends BaseController
         $deleted = $minitCurai->delete();
         return response()->json($deleted);
     }
+	
+    public function search(Request $request)
+    {
+        $search = $request->input('table_search');
+            
+        
+        $minitCurai = MinitCurai::query()
+        ->where('created_at', 'LIKE', "%{$search}%")->get();
+        
+        
+        return view('search', compact('minitCurai'));
+
+    }
     
     
     
