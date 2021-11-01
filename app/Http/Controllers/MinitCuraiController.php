@@ -162,19 +162,20 @@ class MinitCuraiController extends BaseController
         $search = $request->input('table_search');
             
         
-        $minitCurai = MinitCurai::query()
-        ->where('created_at', 'LIKE', "%{$search}%");
+        
         
         
               
 	$perPage = 10;
 
         if (Auth::user()->perananSemasa()->key == Role::SUPER_ADMIN) {
-            $created = MinitCurai::orderBy('created_at', 'desc');
-		
+            
+		$minitCurai = MinitCurai::query()
+        ->where('created_at', 'LIKE', "%{$search}%");
         }
         else {
-            $created = MinitCurai::where("anggota_id", Auth::user()->anggota_id)->orderBy('created_at', 'desc');
+            $minitCurai = MinitCurai::query()
+        ->where('created_at', 'LIKE', "%{$search}%");
 			
         }    
             
