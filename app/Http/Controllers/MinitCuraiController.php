@@ -63,8 +63,7 @@ class MinitCuraiController extends BaseController
             $created = MinitCurai::where("anggota_id", Auth::user()->anggota_id)->orderBy('created_at', 'desc');
 			
         }    
-            $search = $request->input('search-key');
-	    $minitCurai = MinitCurai::query()->where('jenis', 'LIKE', "%{$search}%");
+            
 
             $involve = MinitCurai::select("minitcurai.*")->join("minitcurai_flow", "minitcurai.id", "=",  "minitcurai_flow.minitcurai_id")
                 ->where("minitcurai_flow.to_anggota_id", Auth::user()->anggota_id);
