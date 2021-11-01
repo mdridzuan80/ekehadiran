@@ -48,10 +48,10 @@ class MinitCuraiController extends BaseController
 
     public function grid(Request $request)
     {
-        /* $search = collect([
-            'key' => $request->input('searchKey'),
+        $search = collect([
+            'key' => $request->input('search-key'),
             'dept' => Utility::pcrsListerDepartment($request->input('subDept'), $request->input('searchDept')),
-        ]); */
+        ]); 
 	
         $perPage = 10;
 
@@ -156,18 +156,7 @@ class MinitCuraiController extends BaseController
         $deleted = $minitCurai->delete();
         return response()->json($deleted);
     }
-    public function search(Request $request)
-    {
-        $search = $request->input('search-key');
-
-
-        $minitCurai = MinitCurai::query()
-        ->where('created_at', 'LIKE', "%{$search}%")
-        ->get();
-
-        return view('search', compact('minitCurai'));
-
-    }
+    
     
     
     /*
