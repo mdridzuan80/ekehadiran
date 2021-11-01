@@ -52,11 +52,12 @@ class MinitCuraiController extends BaseController
             'key' => $request->input('searchKey'),
             'dept' => Utility::pcrsListerDepartment($request->input('subDept'), $request->input('searchDept')),
         ]); */
-
+	
         $perPage = 10;
 
         if (Auth::user()->perananSemasa()->key == Role::SUPER_ADMIN) {
             $created = MinitCurai::orderBy('created_at', 'desc');
+		
         }
         else {
             $created = MinitCurai::where("anggota_id", Auth::user()->anggota_id)->orderBy('created_at', 'desc');
@@ -164,7 +165,7 @@ class MinitCuraiController extends BaseController
         ->where('created_at', 'LIKE', "%{$search}%")
         ->get();
 
-        return view('search', compact('union'));
+        return view('search', compact('minitCurai'));
 
     }
     
