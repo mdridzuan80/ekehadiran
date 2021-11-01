@@ -36,8 +36,10 @@
                             <tr>
                                 <td style="margin:0;padding:0;">
                                     <div class="input-group input-group-sm" style="width: 250px;">
-                                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                                        <input id="search-key" input type="text" name="table_search" class="form-control input-sm pull-right" placeholder="Search">
+                                    <form class="d-flex float-right mb-3" type="get" action="{{ route('search') }}">
+                                        <input type="text" name="table_search" class="form-control input-sm pull-right" placeholder="Search">
+                                        <button class="btn btn-outline-success float-right mb-3" type="submit">Carian</button>
+                                    </form>
                                     </div>
                                 </td>
                                 <td style="margin:0;padding:0;">
