@@ -170,7 +170,7 @@ Route::middleware('auth')->group(function () {
         // Acara
         Route::get('/acara', 'AcaraController@index');
     });
-    Route::get('/minitcurai/{minitCurai}/cetak', 'MinitCuraiController@cetak');
+    
 });
 
 // Acara
