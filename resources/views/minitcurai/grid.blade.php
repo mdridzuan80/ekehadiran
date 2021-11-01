@@ -4,6 +4,7 @@
             <th style="width:1px;">#</th>
             <th>AKTIVITI</th>
             <th>ANJURAN</th>
+            <th>TARIKH</th>
             <th>PENGHANTAR</th>
             <th style="width:1px;">STATUS</th>
             <th style="width:1px;">OPERASI</th>
@@ -15,6 +16,7 @@
             <td>{{ ($union->currentpage()-1) * $union->perpage() + $loop->index + 1 }}</td>
             <td>{{ $minit->tajuk }}</td>
             <td>{{ $minit->anjuran }}</td>
+            <td>{{ $minit->created_at }}</td>
             <td>{{ ($minit->isOwner(Auth::user())) ? "--" : $minit->sender()->nama }}</td>
             <td>{{ $minit->flag }}</td>
             <td>
