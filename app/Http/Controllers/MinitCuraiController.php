@@ -163,11 +163,29 @@ class MinitCuraiController extends BaseController
             
         
         $minitCurai = MinitCurai::query()
-        ->where('created_at', 'LIKE', "%{$search}%")->get();
+        ->where('created_at', 'LIKE', "%{$search}%");
         
         
-        return view('search', compact('union'));
+              
+	$perPage = 10;
 
+        if (Auth::user()->perananSemasa()->key == Role::SUPER_ADMIN) {
+            $created = MinitCurai::orderBy('created_at', 'desc');
+		
+        }
+        else {
+            $created = MinitCurai::where("anggota_id", Auth::user()->anggota_id)->orderBy('created_at', 'desc');
+			
+        }    
+            
+
+            $involve = MinitCurai::select("minitcurai.*")->join("minitcurai_flow", "minitcurai.id", "=",  "minitcurai_flow.minitcurai_id")
+                ->where("minitcurai_flow.to_anggota_id", Auth::user()->anggota_id);
+            $involve->union($created);
+
+            $union = $involve->orderBy('tarikh', 'desc')->paginate($perPage);
+
+        return view('minitcurai.grid', compact('union'));
     }
     
     
