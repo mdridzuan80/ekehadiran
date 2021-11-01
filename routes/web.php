@@ -158,7 +158,7 @@ Route::middleware('auth')->group(function () {
         Route::get('pdf_cetak_inbox', function () {
             return view('pdf_cetak_inbox');
         });
-        // Route::post('/minitcurai/search', 'MinitCuraiController@search')->name('search-key');
+        Route::post('/minitcurai/search', 'MinitCuraiController@search')->name('table_search');
         
         // bahagian
         Route::get('/bahagian/create', 'BahagianController@create');
