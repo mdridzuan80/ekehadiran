@@ -54,16 +54,24 @@ class MinitCuraiController extends BaseController
         ]); */
 
         $perPage = 10;
-        $created = MinitCurai::where("anggota_id", Auth::user()->anggota_id)->orderBy('created_at', 'desc');
-        $involve = MinitCurai::select("minitcurai.*")->join("minitcurai_flow", "minitcurai.id", "=",  "minitcurai_flow.minitcurai_id")
-            ->where("minitcurai_flow.to_anggota_id", Auth::user()->anggota_id);
-        $involve->union($created);
 
-        $union = $involve->orderBy('tarikh', 'desc')->paginate($perPage);
+        if (Auth::user()->perananSemasa()->key == Role::SUPER_ADMIN) {
+            $created = MinitCurai::orderBy('created_at', 'desc');
+        }
+        else {
+            $created = MinitCurai::where("anggota_id", Auth::user()->anggota_id)->orderBy('created_at', 'desc');
+			
+        }    
+        
+
+            $involve = MinitCurai::select("minitcurai.*")->join("minitcurai_flow", "minitcurai.id", "=",  "minitcurai_flow.minitcurai_id")
+                ->where("minitcurai_flow.to_anggota_id", Auth::user()->anggota_id);
+            $involve->union($created);
+
+            $union = $involve->orderBy('tarikh', 'desc')->paginate($perPage);
 
         return view('minitcurai.grid', compact('union'));
     }
-
     public function edit(MinitCurai $minitCurai)
     {
         $xtraAnggota = XtraAnggota::select();
