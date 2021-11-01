@@ -166,7 +166,7 @@ class MinitCuraiController extends BaseController
         ->where('created_at', 'LIKE', "%{$search}%")->get();
         
         
-        return view('search', compact('minitCurai'));
+        return view('search', compact('union'));
 
     }
     
