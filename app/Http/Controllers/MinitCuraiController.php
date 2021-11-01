@@ -158,7 +158,7 @@ class MinitCuraiController extends BaseController
     }
     public function search(Request $request)
     {
-        $search = $request->input('table_search');
+        $search = $request->input('search-key');
 
 
         $minitCurai = MinitCurai::query()
