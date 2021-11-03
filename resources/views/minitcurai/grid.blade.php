@@ -1,6 +1,6 @@
 <table class="table table-bordered table-hover">
     <thead>
-        <tr style="background-image: linear-gradient(to bottom, #fafafa 0, #f4f4f4 100%);">
+        <tr style="background-image: linear-gradient(to bottom, #fafafa 0, #f4f4f4 100%);" id="mytable">
             <th style="width:1px;">#</th>
             <th>AKTIVITI</th>
             <th>ANJURAN</th>
