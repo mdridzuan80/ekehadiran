@@ -610,10 +610,8 @@
             populateDg(url, '#dg-minit');
         });
     });
-</script>
-
-<script>
-        $(document).ready(function() {
+    
+    $(document).ready(function() {
             $('#mytable thead tr').clone(true).appendTo( '#mytable thead' );
             $('#mytable thead tr:eq(1) th').each( function (i) {
                 var title = $(this).text();
@@ -634,7 +632,7 @@
                 fixedHeader: true
             });
         });
-    </script>
+</script>
 
 
 
