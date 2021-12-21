@@ -105,7 +105,7 @@
         <button id="btn-minit-sah" class="btn btn-success" data-status="SAH">SAH</button>
         @endif
         
-        <a href="{{ route('minitcurai.cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a>
+        <a href="{{ url('minitcurai.cetak') }}" class="btn btn-default btn-sm" role="button" aria-pressed="true">CETAK</a>
         
         
     </form>
