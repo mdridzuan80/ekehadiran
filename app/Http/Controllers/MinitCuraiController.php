@@ -145,7 +145,7 @@ class MinitCuraiController extends BaseController
         }
     }
 
-    public function cetak(MinitCurai $minitCurai. $id)
+    public function cetak(MinitCurai $minitCurai, $id)
     {
         $minitCurai = MinitCurai::find($id);
 	$pdf = PDF::loadView('laporan.cetak', compact('minitCurai'))->setOptions(['defaultFont' => 'sans-serif']);
