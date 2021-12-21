@@ -163,6 +163,7 @@ return [
         App\Providers\WaktuBerperingkatServiceProvider::class,
         App\Providers\FlowProvider::class,
         App\Providers\LaporanRepositoryProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
     ],
 
     /*
