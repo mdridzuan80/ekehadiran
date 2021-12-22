@@ -149,7 +149,7 @@ class MinitCuraiController extends BaseController
     {
         
 	$pdf = PDF::loadView('laporan.cetak', compact('minitCurai'))->setOptions(['defaultFont' => 'sans-serif']);
-        return $pdf->download('MinitCuraiJPNMelaka.pdf');
+        return $pdf->stream('MinitCuraiJPNMelaka.pdf', ["Attachment" => 0]);
     }
     
     public function destroy(MinitCurai $minitCurai)
