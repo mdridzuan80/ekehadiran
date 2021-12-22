@@ -155,9 +155,9 @@ Route::middleware('auth')->group(function () {
         Route::post('/minitcurai/{minitCurai}/pulang', 'MinitCuraiController@pulang');
         //Route::get("/pdf_cetak_inbox/{id}", "App\Http\Controllers\MinitCuraiController@pdf_cetak_inbox");
         Route::get('/minitcurai/{minitCurai}/cetak', 'MinitCuraiController@cetak');
-        Route::get('pdf_cetak_inbox', function () {
-            return view('pdf_cetak_inbox');
-        });
+        //Route::get('pdf_cetak_inbox', function () {
+        //    return view('pdf_cetak_inbox');
+        //});
         Route::post('/minitcurai/search', 'MinitCuraiController@search')->name('search');
         
         // bahagian
