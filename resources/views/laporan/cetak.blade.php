@@ -7,14 +7,7 @@
     <style type="text/css"></style>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     
-    <style>
-	textarea {
-	  width: 100%;
-	  height: 200px;
-	}
-	
-	
-    </style>
+    
     
 </head>
 
@@ -62,7 +55,7 @@
                 Pegawai Yang Terlibat:</b></td>
         </tr>
         <tr>
-            <td><textarea name="txtPegawai" readonly>{{ $minitCurai->pegawai_terlibat }}</textarea></td>
+            <td><textarea name="txtPegawai" style="width:100%;height:100px" readonly>{{ $minitCurai->pegawai_terlibat }}</textarea></td>
         </tr>
 	
        	<tr>
@@ -70,7 +63,7 @@
                 Isu / Isu Penting Mesyuarat luar / Bengkel / Kursus / Program:</b></td>
         </tr>
         <tr>
-            <td><textarea name="txtIsu" style="width:100%;text-align:left;margin-left:0" readonly>{{ $minitCurai->isu }}</textarea></td>
+            <td><textarea name="txtIsu" style="width:100%;height:800px" readonly>{{ $minitCurai->isu }}</textarea></td>
         </tr>
         <tr>
             <td><hr style="width:100%;text-align:left;margin-left:0"></td>
@@ -81,7 +74,7 @@
         </tr>
 	<tr>
              <td>
-	     <textarea id="txtTindakan" readonly>{{ $minitCurai->tindakan }}</textarea></td>
+	     <textarea id="txtTindakan" style="width:100%;height:200px"readonly>{{ $minitCurai->tindakan }}</textarea></td>
         </tr>    
         </table>
     <br>
