@@ -10,7 +10,7 @@
     <style>
 	textarea {
 	  width: 100%;
-	 
+	  height: 200%
 	}
 	
 	
@@ -65,7 +65,7 @@
             <td><textarea name="txtPegawai" readonly>{{ $minitCurai->pegawai_terlibat }}</textarea></td>
         </tr>
 	<tr>
-            <td><hr style="width:100%;height:100%;text-align:left;margin-left:0"></td>
+            <td><hr style="width:100%;text-align:left;margin-left:0"></td>
         </tr>
        	<tr>
             <td><b>5. &nbsp;&nbsp;&nbsp;
