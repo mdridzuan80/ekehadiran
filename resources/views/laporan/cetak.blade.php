@@ -10,7 +10,7 @@
     <style>
 	textarea {
 	  width: 100%;
-	  height: 200%
+	  height: 200px;
 	}
 	
 	
@@ -70,9 +70,11 @@
                 Isu / Isu Penting Mesyuarat luar / Bengkel / Kursus / Program:</b></td>
         </tr>
         <tr>
-            <td><textarea name="txtIsu" style="width:100%;height:300%;text-align:left;margin-left:0" readonly>{{ $minitCurai->isu }}</textarea></td>
+            <td><textarea name="txtIsu" style="width:100%;text-align:left;margin-left:0" readonly>{{ $minitCurai->isu }}</textarea></td>
         </tr>
-        
+        <tr>
+            <td><hr style="width:100%;text-align:left;margin-left:0"></td>
+        </tr>
 	<tr>
             <td><b>6. &nbsp;&nbsp;&nbsp;
                 Nyatakan Tindakan Yang Mesti / Perlu Diambil:<b></td>
