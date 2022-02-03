@@ -64,9 +64,7 @@
         <tr>
             <td><textarea name="txtPegawai" readonly>{{ $minitCurai->pegawai_terlibat }}</textarea></td>
         </tr>
-	<tr>
-            <td><hr style="width:100%;text-align:left;margin-left:0"></td>
-        </tr>
+	
        	<tr>
             <td><b>5. &nbsp;&nbsp;&nbsp;
                 Isu / Isu Penting Mesyuarat luar / Bengkel / Kursus / Program:</b></td>
