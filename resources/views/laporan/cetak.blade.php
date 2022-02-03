@@ -65,18 +65,16 @@
             <td><textarea name="txtPegawai" readonly>{{ $minitCurai->pegawai_terlibat }}</textarea></td>
         </tr>
 	<tr>
-            <td><hr style="width:100%;height:50%;text-align:left;margin-left:0"></td>
+            <td><hr style="width:100%;height:100%;text-align:left;margin-left:0"></td>
         </tr>
        	<tr>
             <td><b>5. &nbsp;&nbsp;&nbsp;
                 Isu / Isu Penting Mesyuarat luar / Bengkel / Kursus / Program:</b></td>
         </tr>
         <tr>
-            <td><textarea name="txtIsu" readonly>{{ $minitCurai->isu }}</textarea></td>
+            <td><textarea name="txtIsu" style="width:100%;height:300%;text-align:left;margin-left:0" readonly>{{ $minitCurai->isu }}</textarea></td>
         </tr>
-        <tr>
-            <td><hr style="width:100%;height:300%;text-align:left;margin-left:0"></td>
-        </tr>
+        
 	<tr>
             <td><b>6. &nbsp;&nbsp;&nbsp;
                 Nyatakan Tindakan Yang Mesti / Perlu Diambil:<b></td>
